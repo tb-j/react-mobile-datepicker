@@ -2,7 +2,7 @@ import React, {
   FC, useCallback, useEffect, useRef, useState,
 } from 'react';
 
-import { Direction, Unit } from './types';
+import { DatePickerItemProps, Direction } from './types';
 import { isFunction, isTouchEvent } from './utils';
 import { convertDate, nextMap } from './utils/time';
 
@@ -11,23 +11,11 @@ const DATE_LENGTH = 10;
 const MIDDLE_INDEX = Math.floor(DATE_LENGTH / 2);
 const MIDDLE_Y = - DATE_HEIGHT * MIDDLE_INDEX;
 
-
-interface Props {
-  type: Unit,
-  value: Date,
-  min: Date,
-  max: Date,
-  format: string | ((date: Date) => string),
-  step: number,
-  onSelect: Function,
-}
-
-const iniDates = ({ step, type, value }: Pick<Props, 'step' | 'type' | 'value'>) => Array(...Array(DATE_LENGTH))
+const iniDates = ({ step, type, value }: Pick<DatePickerItemProps, 'step' | 'type' | 'value'>) => Array(...Array(DATE_LENGTH))
   .map((date, index) =>
     nextMap[type](value, (index - MIDDLE_INDEX) * step));
 
-
-const DatePickerItem: FC<Props> = ({
+const DatePickerItem: FC<DatePickerItemProps> = ({
   type,
   value,
   min,

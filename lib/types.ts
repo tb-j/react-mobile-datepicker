@@ -8,7 +8,17 @@ export enum Direction {
 export const Themes = ['default', 'dark', 'ios', 'android', 'android-dark'] as const;
 export type Theme = typeof Themes[number];
 
-export interface DateConfig {
+export interface DatePickerItemProps {
+  type: Unit,
+  value: Date,
+  min: Date,
+  max: Date,
+  format: string | ((date: Date) => string),
+  step: number,
+  onSelect: Function,
+}
+
+export interface DateConfig extends Pick<DatePickerItemProps, 'format' | 'step'> {
   format: string,
   caption: string,
   step: number,
