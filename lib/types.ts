@@ -19,9 +19,7 @@ export interface DatePickerItemProps {
 }
 
 export interface DateConfig extends Pick<DatePickerItemProps, 'format' | 'step'> {
-  format: string,
   caption: string,
-  step: number,
   type: Unit,
 }
 
