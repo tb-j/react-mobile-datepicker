@@ -1,6 +1,7 @@
 import * as React from 'react';
-import './index.css'
+import './index.css';
 import * as ReactDOM from 'react-dom';
+
 import DatePicker, { Theme, Themes } from '../../lib';
 
 const App = () => {
@@ -9,17 +10,17 @@ const App = () => {
   const [theme, setTheme] = React.useState<Theme>('default');
   const handleToggle = (nextIsOpen: typeof isOpen) => {
     setIsOpen(nextIsOpen);
-  }
+  };
 
   const handleThemeToggle = (nextTheme: typeof theme) => {
     setTheme(nextTheme);
     setIsOpen(true);
-  }
+  };
 
   const handleSelect = (nextTime: typeof time) => {
     setTime(nextTime);
     setIsOpen(false);
-  }
+  };
 
   return (
     <div className='root'>
@@ -66,8 +67,6 @@ const App = () => {
       />
     </div>
   );
-}
+};
 
-export default 
-
-ReactDOM.render(<App />, document.getElementById('react-box'));
+export default ReactDOM.render(<App />, document.getElementById('react-box'));

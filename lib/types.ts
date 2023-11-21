@@ -16,6 +16,7 @@ export interface DatePickerItemProps {
   format: string | ((date: Date) => string),
   step: number,
   onSelect: Function,
+  fastWheelMultiplier?: number,
 }
 
 export interface DateConfig extends Pick<DatePickerItemProps, 'format' | 'step'> {

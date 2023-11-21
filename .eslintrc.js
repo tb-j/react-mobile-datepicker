@@ -28,7 +28,6 @@ module.exports = {
         caseInsensitive: true
       }
     }],
-    'import/no-relative-parent-imports': 'error',
     '@typescript-eslint/no-unused-vars': ['error', {
       varsIgnorePattern: '_',
       argsIgnorePattern: '_',
