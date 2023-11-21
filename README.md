@@ -94,7 +94,7 @@ set `dateConfig` to configure hour, minute and second.
   step: 1,
 }, {
   type: 'second',
-  format: 'hh',
+  format: 'ss',
   caption: 'Sec',
   step: 1,
 }]
@@ -306,7 +306,7 @@ all default date configuration information, as follows
 },
 'second': {
   type: 'second',
-  format: 'hh',
+  format: 'ss',
   caption: 'Sec',
   step: 1,
 }]
