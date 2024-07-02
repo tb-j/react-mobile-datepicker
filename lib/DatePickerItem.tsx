@@ -202,7 +202,7 @@ const DatePickerItem: FC<DatePickerItemProps> = ({
     }
   }, [mouseDown, handleContentMouseMove, handleContentMouseUp]);
 
-  const onWheel = useCallback((e) => {
+  const onWheel = useCallback((e: any) => {
     const date = dates[MIDDLE_INDEX];
     if (date.getTime() < min.getTime() || date.getTime() > max.getTime()) {
       if (date.getTime() < min.getTime())
